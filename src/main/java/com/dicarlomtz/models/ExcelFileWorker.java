@@ -97,12 +97,6 @@ public class ExcelFileWorker extends FileWorker {
     }
 
     public void copySheets(Sheet masterSheet, Sheet newSheet) {
-        int rowsNumber = newSheet.getLastRowNum();
-        int columnsNumber = newSheet.getRow(0).getLastCellNum();
-
-        System.out.println(rowsNumber);
-        System.out.println(columnsNumber);
-
         Iterator<Row> rowIterator = newSheet.iterator();
 
         while (rowIterator.hasNext()) {

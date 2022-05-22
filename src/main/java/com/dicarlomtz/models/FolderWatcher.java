@@ -35,7 +35,7 @@ public class FolderWatcher {
         Runnable r = new Runnable() {
             private WatchKey watchKey = null;
 
-            public synchronized void run() {
+            public void run() {
                 try {
                     while ((watchKey = watchService.take()) != null) {
                         for (WatchEvent<?> event : watchKey.pollEvents()) {

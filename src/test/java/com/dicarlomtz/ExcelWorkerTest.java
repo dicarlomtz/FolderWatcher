@@ -89,6 +89,7 @@ public class ExcelWorkerTest {
             workbook.write(fileOut);
             fileOut.close();
         } catch (IOException e) {
+            Logger.getLogger(ExcelWorkerTest.class.getName()).log(Level.SEVERE, null, e);
             e.printStackTrace();
         }
 
@@ -98,6 +99,7 @@ public class ExcelWorkerTest {
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
+            Logger.getLogger(ExcelWorkerTest.class.getName()).log(Level.SEVERE, null, e);
             e.printStackTrace();
         }
 
@@ -117,6 +119,7 @@ public class ExcelWorkerTest {
             Workbook masterWorkbook = WorkbookFactory.create(masterFile);
             testSheet = masterWorkbook.getSheet("test");
         } catch (EncryptedDocumentException | IOException e) {
+            Logger.getLogger(ExcelWorkerTest.class.getName()).log(Level.SEVERE, null, e);
             e.printStackTrace();
         }
 
